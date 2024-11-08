@@ -1,15 +1,27 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
 {
-    int firstNum = 0, secondNum = 0, sum = 0;
+    char numbers[50];
+    int num = 0;
 
-    if (scanf("%d,%d", &firstNum, &secondNum) == 2)
-    {
-        sum = firstNum + secondNum;
+    // // Read input string from stdin
+    // fgets(numbers, sizeof(numbers), stdin);
 
-        (firstNum < 0 || secondNum < 0) ? printf("(%d)+(%d)=(%d)\n", firstNum, secondNum, sum) : printf("%d+%d=%d\n", firstNum, secondNum, sum);
-    }
+    // // Process each character in the input string
+    // for(int i = 0; i < sizeof(numbers) && numbers[i] != '\0'; i++)
+    // {
+    //     // Check if the character is a digit
+    //     if (isdigit(numbers[i])) 
+    //     {
+    //         num = numbers[i] - '0';  // Convert character to integer
+    //         printf("%d", num);
+    //     }
+    // }
 
+    scanf("%d", &num);
+    printf("%d", num);
+    
     return 0;
 }
